@@ -1,0 +1,96 @@
+notAPlayer: '&cOnly players may execute this command!'
+targetNonExistent: '&6%target%&c Does not exist!'
+notEnoughBalance: '&cYou do not have enough BTC to make this transaction!'
+illegalArguments: '&cIllegal Arguments! Please try again with the correct arguments!'
+
+Missions:
+  PlayerKills:
+    enabled: true
+    received: '&7[&eBTC&7] &6You have found &a%amount%&6 BTC while killing &a%target%&6!'
+    chances:
+      - 1
+      - 5
+      - 10
+      - 15
+    rewards:
+      - 100
+      - 50
+      - 25
+      - 12
+  Mining:
+    enabled: true
+    received: '&7[&eBTC&7] &6You have found &a%amount%&6 BTC while mining!'
+    reward: 5 #If the block does not have a specific reward this is the reward that will be given
+    blocks:
+      - GRASS
+      - STONE
+      - COAL_ORE
+      - ENDER_STONE
+    chances:
+      - 1 # All the chances are in %
+      - 2
+      - 3
+      - 30
+    GRASS:
+      reward: 2
+
+Give:
+  incorrect-usage: '&cIncorrect usage! The correct usage is &b/btc give <name> <amount>'
+  bitcoinReceived: '&7[&eBTC&7]&6 You have been given &a%amount%&6 BTC!'
+  bitcoinSent: '&7[&eBTC&7]&6 You have successfully sent &a%target% %amount% &6BTC!'
+
+Take:
+  incorrect-usage: '&cIncorrect usage! The correct usage is &b/btc take <name> <amount>'
+  bitcoinTaken: '&7[&eBTC&7] &a%amount%&6 BTC has been taken from your account!'
+  bitcoinTook: '&7[&eBTC&7]&6 You have successfully taken &a%amount% &6from &a%target%&6!'
+
+Pay:
+  incorrect-usage: '&cIncorrect usage! The correct usage is &b/btc pay <name> <amount>'
+  cantPayYourself: '&cIncorrect usage! You may not pay yourself!'
+  paymentReceived: '&7[&eBTC&7]&a %by% &6Has sent you &a%amount%&6 BTC!'
+  paymentSent: '&7[&eBTC&7] &6Successfully sent &a%target% %amount% &6BTC!'
+
+Vendor:
+  incorrect-usage: '&cIncorrect usage! The correct usage is &b/vendor'
+  opening: '&7[&eBTC&7] &6Opening the Vendor GUI!'
+  purchase: '&7[&eBTC&7] &6Successfully purchased %item%&6 for &a%cost%&6 BTC!'
+  GUI:
+    title: '&d&lVendor'
+    rows: 3
+    amountOfItems: 3
+    fillItem:
+      enabled: true
+      material: STAINED_GLASS_PANE
+      displayname: '&3 '
+      lore:
+        - ''
+    0:
+      slot: 12
+      material: DIAMOND_SWORD
+      displayname: '&bDiamond Sword'
+      commandToExecute: 'give %player% diamond_sword'
+      cost: 2000
+      lore:
+        - '&bGodly Diamond Sword'
+        - ''
+        - '&7((Click here to purchase Diamond Sword&7))'
+    1:
+      slot: 13
+      material: DIAMOND_AXE
+      displayname: '&bDiamond Axe'
+      commandToExecute: 'give %player% diamond_axe'
+      cost: 3000
+      lore:
+        - '&bGodly Diamond Axe'
+        - ''
+        - '&7((Click here to purchase Diamond Sword&7))'
+    2:
+      slot: 14
+      material: PAPER
+      displayname: '&fA Piece Of Paper'
+      commandToExecute: 'give %player% paper'
+      cost: 10000
+      lore:
+        - '&f&lA Piece Of Paper'
+        - ''
+        - '&7((Click here to purchase Diamond Sword&7))'

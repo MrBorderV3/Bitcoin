@@ -1,0 +1,8 @@
+name: Bitcoin
+author: MrBorder
+version: 1.0
+main: me.border.bitcoin.Bitcoin
+commands:
+  bitcoin:
+    aliases: [btc]
+  vendor:
